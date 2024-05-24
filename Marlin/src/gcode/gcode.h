@@ -305,6 +305,7 @@
  * M951 - Set Magnetic Parking Extruder parameters. (Requires MAGNETIC_PARKING_EXTRUDER)
  * M3426 - Read MCP3426 ADC over I2C. (Requires HAS_MCP3426_ADC)
  * M7219 - Control Max7219 Matrix LEDs. (Requires MAX7219_GCODE)
+ * M42069 - Encoder Feedback
  *
  *** SCARA ***
  * M360 - SCARA calibration: Move to cal-position ThetaA (0 deg calibration)
@@ -1292,6 +1293,9 @@ private:
     static void M710();
     static void M710_report(const bool forReplay=true);
   #endif
+
+
+  static void M9999();
 
   static void T(const int8_t tool_index) IF_DISABLED(HAS_TOOLCHANGE, { UNUSED(tool_index); });
 

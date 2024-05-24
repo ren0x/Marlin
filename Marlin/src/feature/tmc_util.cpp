@@ -25,6 +25,7 @@
 #if HAS_TRINAMIC_CONFIG
 
 #include "tmc_util.h"
+#include <TMCStepper.h>
 #include "../MarlinCore.h"
 
 #include "../module/stepper/indirection.h"
